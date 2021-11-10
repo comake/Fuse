@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Methods | Fuse.js</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/manifest.json">
+    <script>
+      (function(){
+        var bsa_optimize=document.createElement('script');
+        bsa_optimize.type='text/javascript';
+        bsa_optimize.async=true;
+        bsa_optimize.src='https://cdn4.buysellads.net/pub/fusejs.js?'+(new Date()-new Date()%600000);
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+      })();
+      </script>
+    <meta name="description" content="Lightweight fuzzy-search library, in JavaScript">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="4nm40QLVcDJmEJSAbrMfZ7fpBJZIXL1oSngBAYrZopY">
+    <link rel="preload" href="/assets/css/0.styles.18aee5af.css" as="style"><link rel="preload" href="/assets/js/app.cd989449.js" as="script"><link rel="preload" href="/assets/js/11.972a7521.js" as="script"><link rel="preload" href="/assets/js/10.330bd4f7.js" as="script"><link rel="preload" href="/assets/js/18.9c94905a.js" as="script"><link rel="preload" href="/assets/js/8.faf94e11.js" as="script"><link rel="prefetch" href="/assets/js/1.4e3bc644.js"><link rel="prefetch" href="/assets/js/12.6ec784ab.js"><link rel="prefetch" href="/assets/js/13.4150a211.js"><link rel="prefetch" href="/assets/js/14.27a9e705.js"><link rel="prefetch" href="/assets/js/15.ff71dde8.js"><link rel="prefetch" href="/assets/js/16.6669c919.js"><link rel="prefetch" href="/assets/js/17.005f0b2b.js"><link rel="prefetch" href="/assets/js/19.76d09f59.js"><link rel="prefetch" href="/assets/js/2.6f18527e.js"><link rel="prefetch" href="/assets/js/20.45f8d8a4.js"><link rel="prefetch" href="/assets/js/21.b1564c2b.js"><link rel="prefetch" href="/assets/js/22.3709fffa.js"><link rel="prefetch" href="/assets/js/23.09b3366b.js"><link rel="prefetch" href="/assets/js/24.c3759d3f.js"><link rel="prefetch" href="/assets/js/25.5e08fad1.js"><link rel="prefetch" href="/assets/js/26.acbdf211.js"><link rel="prefetch" href="/assets/js/27.50c0494b.js"><link rel="prefetch" href="/assets/js/28.f8ce9485.js"><link rel="prefetch" href="/assets/js/29.59426f5b.js"><link rel="prefetch" href="/assets/js/3.d7cadae4.js"><link rel="prefetch" href="/assets/js/30.b3d3b5e3.js"><link rel="prefetch" href="/assets/js/4.03757907.js"><link rel="prefetch" href="/assets/js/5.2a511dde.js"><link rel="prefetch" href="/assets/js/6.3cebeb3b.js"><link rel="prefetch" href="/assets/js/7.a8e169a0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.18aee5af.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="Fuse.js" class="logo"> <span class="site-name can-hide">Fuse.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/team/" class="nav-link">
+  Team
+</a></div><div class="nav-item"><a href="/support/" class="nav-link">
+  Support Fuse.js
+</a></div><div class="nav-item"><a href="https://github.com/krisk/Fuse/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Release Notes
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/krisk/fuse" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/team/" class="nav-link">
+  Team
+</a></div><div class="nav-item"><a href="/support/" class="nav-link">
+  Support Fuse.js
+</a></div><div class="nav-item"><a href="https://github.com/krisk/Fuse/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Release Notes
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/krisk/fuse" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="carbon-ads"></div> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Getting Started</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/getting-started/installation.html" class="sidebar-link">Installation</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/getting-started/different-builds.html" class="sidebar-link">Explanation of Different Builds</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><a href="/demo.html" class="sidebar-link">Live Demo</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>API Reference</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api/options.html" class="sidebar-link">Options</a></li><li><a href="/api/config.html" class="sidebar-link">Global config</a></li><li><a href="/api/methods.html" aria-current="page" class="active sidebar-link">Methods</a></li><li><a href="/api/indexing.html" class="sidebar-link">Indexing</a></li><li><a href="/api/query.html" class="sidebar-link">Logical Query Operators</a></li></ul></section></li><li><a href="/examples.html" class="sidebar-link">Examples</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/examples.html#search-string-array" class="sidebar-link">Search String Array</a></li><li class="sidebar-sub-header"><a href="/examples.html#search-object-array" class="sidebar-link">Search Object Array</a></li><li class="sidebar-sub-header"><a href="/examples.html#nested-search" class="sidebar-link">Nested Search</a></li><li class="sidebar-sub-header"><a href="/examples.html#weighted-search" class="sidebar-link">Weighted Search</a></li><li class="sidebar-sub-header"><a href="/examples.html#extended-search" class="sidebar-link">Extended Search</a></li></ul></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Concepts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/concepts/scoring-theory.html" class="sidebar-link">Scoring Theory</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="methods"><a href="#methods" class="header-anchor">#</a> Methods</h1> <h3 id="search"><a href="#search" class="header-anchor">#</a> <code>search</code></h3> <p>Searches the entire collection of documents, and returns a list of search results.</p> <div class="language-js extra-class"><pre class="language-js"><code>fuse<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token comment">/* pattern , options*/</span><span class="token punctuation">)</span>
+</code></pre></div><p>The pattern can be one of:</p> <ul><li><a href="/examples.html#search-string-array">String</a></li> <li><a href="/examples.html#nested-search">Path</a></li> <li><a href="/examples.html#extended-search">Extended query</a></li> <li><a href="/api/query.html">Logical query</a></li></ul> <p>The options:</p> <ul><li><code>limit</code> (type: <code>number</code>): Denotes the max number of returned search results.</li></ul> <h3 id="setcollection"><a href="#setcollection" class="header-anchor">#</a> <code>setCollection</code></h3> <p>Set/replace the entire collection of documents. If no index is provided, one will be generated. Example:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apple'</span><span class="token punctuation">,</span> <span class="token string">'orange'</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> fuse <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fuse</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
+
+fuse<span class="token punctuation">.</span><span class="token function">setCollection</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'banana'</span><span class="token punctuation">,</span> <span class="token string">'pear'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="add"><a href="#add" class="header-anchor">#</a> <code>add</code></h3> <p>Adds a doc to the collection. Example:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apple'</span><span class="token punctuation">,</span> <span class="token string">'orange'</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> fuse <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fuse</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
+
+fuse<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'banana'</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+<span class="token comment">// =&gt; 3</span>
+</code></pre></div><h3 id="remove"><a href="#remove" class="header-anchor">#</a> <code>remove</code></h3> <p>Removes all documents from the list which the predicate returns truthy for, and returns an array of the removed docs. The predicate is invoked with two arguments: <code>(doc, index)</code>. Example:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apple'</span><span class="token punctuation">,</span> <span class="token string">'orange'</span><span class="token punctuation">,</span> <span class="token string">'banana'</span><span class="token punctuation">,</span> <span class="token string">'pear'</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> fuse <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fuse</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> results <span class="token operator">=</span> fuse<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">doc</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> doc <span class="token operator">===</span> <span class="token string">'banana'</span> <span class="token operator">||</span> doc <span class="token operator">===</span> <span class="token string">'pear'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+<span class="token comment">// =&gt; 1</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span>
+<span class="token comment">// =&gt; ['banana', 'pear']</span>
+</code></pre></div><h3 id="removeat"><a href="#removeat" class="header-anchor">#</a> <code>removeAt</code></h3> <p>Removes the doc at the specified index. Example:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apple'</span><span class="token punctuation">,</span> <span class="token string">'orange'</span><span class="token punctuation">,</span> <span class="token string">'banana'</span><span class="token punctuation">,</span> <span class="token string">'pear'</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> fuse <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fuse</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
+
+fuse<span class="token punctuation">.</span><span class="token function">removeAt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
+<span class="token comment">// =&gt; ['apple', 'banana', 'pear']</span>
+</code></pre></div><h3 id="getindex"><a href="#getindex" class="header-anchor">#</a> <code>getIndex</code></h3> <p>Returns the generated Fuse index. Example:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apple'</span><span class="token punctuation">,</span> <span class="token string">'orange'</span><span class="token punctuation">,</span> <span class="token string">'banana'</span><span class="token punctuation">,</span> <span class="token string">'pear'</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> fuse <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Fuse</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fuse<span class="token punctuation">.</span><span class="token function">getIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">// =&gt; 4</span>
+</code></pre></div><div class="donate-link-wrapper"><strong>❤️️ Fuse.js? Support its development with a small donation.</strong> <br> <a href="/support.html" class="donate-btn">Donate</a></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/krisk/fuse/edit/master/docs/api/methods.md" target="_blank" rel="noopener noreferrer">Edit this page on GitHub</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">1/1/2021, 6:58:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/api/config.html" class="prev">
+        Global config
+      </a></span> <span class="next"><a href="/api/indexing.html">
+        Indexing
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.cd989449.js" defer></script><script src="/assets/js/11.972a7521.js" defer></script><script src="/assets/js/10.330bd4f7.js" defer></script><script src="/assets/js/18.9c94905a.js" defer></script><script src="/assets/js/8.faf94e11.js" defer></script>
+  </body>
+</html>
