@@ -1986,12 +1986,10 @@
             includeScore = _this$options.includeScore,
             shouldSort = _this$options.shouldSort,
             sortFn = _this$options.sortFn,
-            ignoreFieldNorm = _this$options.ignoreFieldNorm,
-            fieldNormWeight = _this$options.fieldNormWeight;
+            ignoreFieldNorm = _this$options.ignoreFieldNorm;
         var results = isString(query) ? isString(this._docs[0]) ? this._searchStringList(query) : this._searchObjectList(query) : this._searchLogical(query);
         computeScore$1(results, {
-          ignoreFieldNorm: ignoreFieldNorm,
-          fieldNormWeight: fieldNormWeight
+          ignoreFieldNorm: ignoreFieldNorm
         });
 
         if (shouldSort) {
@@ -2096,6 +2094,7 @@
             case LogicalOperator.OR:
               {
                 var _res = [];
+                var bestScore = null;
 
                 for (var _i = 0, _len = node.children.length; _i < _len; _i += 1) {
                   var _child = node.children[_i];
@@ -2103,9 +2102,14 @@
                   var _result = evaluate(_child, item, idx);
 
                   if (_result.length) {
-                    _res.push.apply(_res, _toConsumableArray(_result));
+                    var _matches = _result[0].matches;
 
-                    break;
+                    for (var j = 0, mLen = _matches.length; j < mLen; j += 1) {
+                      if (!bestScore || _matches[j].score < bestScore) {
+                        bestScore = _matches[j].score;
+                        _res = _result;
+                      }
+                    }
                   }
                 }
 

@@ -1564,8 +1564,7 @@ class Fuse {
       includeScore,
       shouldSort,
       sortFn,
-      ignoreFieldNorm,
-      fieldNormWeight
+      ignoreFieldNorm
     } = this.options;
 
     let results = isString(query)
@@ -1574,7 +1573,7 @@ class Fuse {
         : this._searchObjectList(query)
       : this._searchLogical(query);
 
-    computeScore$1(results, { ignoreFieldNorm, fieldNormWeight });
+    computeScore$1(results, { ignoreFieldNorm });
 
     if (shouldSort) {
       results.sort(sortFn);
@@ -1658,15 +1657,22 @@ class Fuse {
           return res
         }
         case LogicalOperator.OR: {
-          const res = [];
+          let res = [];
+          let bestScore = null;
           for (let i = 0, len = node.children.length; i < len; i += 1) {
             const child = node.children[i];
             const result = evaluate(child, item, idx);
             if (result.length) {
-              res.push(...result);
-              break
+              const matches = result[0].matches;
+              for (let j = 0, mLen = matches.length; j < mLen; j += 1) {
+                if (!bestScore || matches[j].score < bestScore) {
+                  bestScore = matches[j].score;
+                  res = result;
+                }
+              }
             }
           }
+
           return res
         }
       }
